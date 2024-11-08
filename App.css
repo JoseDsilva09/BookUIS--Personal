@@ -1,0 +1,17 @@
+/* Contenedor principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Contenedor para el contenido debajo del navbar */
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Para centrar y ajustar el tamaño */
+    padding: 20px;
+    margin-top: 80px; /* Ajusta el margen según tu navbar */
+  }
+  

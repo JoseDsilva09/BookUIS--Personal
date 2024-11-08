@@ -1,13 +1,17 @@
+import React from 'react';
 import BarNav from './components/BarNav';
 import Form from './components/form';
+import './styles/App.css'; // Puedes tener estilos globales aquí
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div className="app-container">
       <BarNav />
-      <Form />
-    </>
+      <div className="content-wrapper">
+        <Form />
+      </div>
+    </div>
   );
-}
+};
 
 export default App;
