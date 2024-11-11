@@ -1,0 +1,177 @@
+/* Contenedor principal */
+.pqr-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  height: 100vh;
+  background-image: url('../assets/imagenPQR.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenedor del formulario */
+.pqr-form-wrapper {
+  display: flex;
+  max-width: 1000px;
+  width: 100%; /* Ajusta el ancho al 100% */
+  background: rgba(255, 255, 255, 0.25); 
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  gap: 20px;
+  align-items: center;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ajustar el contenido del formulario */
+.pqr-form-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* Estilos del logo */
+.pqr-form-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pqr-logo-image {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Títulos */
+.pqr-form-title {
+  text-align: center;
+  color: #000000;
+  margin-bottom: -25px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.pqr-form-subtitle {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 450;
+}
+
+/* Estilos del formulario */
+.pqr-custom-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pqr-form-group {
+  margin-bottom: 20px;
+}
+
+.pqr-form-label {
+  display: block;
+  margin-bottom: 15px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.pqr-form-label1 {
+  display: block;
+  margin-bottom: -5px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.pqr-form-input,
+.pqr-form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.pqr-form-input:focus,
+.pqr-form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.pqr-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Botón de envío */
+.pqr-form-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8dec51;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pqr-form-button:hover {
+  background-color: #7CCF53;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .pqr-form-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .pqr-form-logo {
+    margin-top: 20px;
+  }
+
+  .pqr-logo-image {
+    max-width: 100px;
+  }
+
+  /* Ajuste de los márgenes */
+  .pqr-form-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+
+  .pqr-form-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0 20px 0;
+  }
+
+  .pqr-form-wrapper {
+    width: 100%; /* Ajuste el ancho al 100% */
+    padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  /* Ajustes en los campos del formulario */
+  .pqr-form-group {
+    margin-bottom: 15px; /* Reduce el espacio entre los campos */
+  }
+
+  .pqr-form-input,
+  .pqr-form-textarea {
+    padding: 10px; /* Reduce el padding de los campos */
+  }
+
+  .pqr-form-button {
+    padding: 10px;
+    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+  }
+}
