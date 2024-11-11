@@ -1,74 +1,71 @@
 /* Contenedor principal */
 .pqr-form-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 35px;
-  height: 100vh;
+  padding: 35px 20px;
+  min-height: 100vh; 
   background-image: url('../assets/imagenPQR.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-sizing: border-box; 
+  overflow: auto;
 }
 
 /* Contenedor del formulario */
 .pqr-form-wrapper {
   display: flex;
+  flex-direction: column;
   max-width: 1000px;
-  width: 100%; /* Ajusta el ancho al 100% */
-  background: rgba(255, 255, 255, 0.25); 
-  border: 1px solid rgba(255, 255, 255, 0.18); 
+  width: 80%; 
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  gap: 20px;
-  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(10px);
+  box-sizing: border-box; 
+  position: relative; 
+  z-index: 1;
 }
 
-/* Ajustar el contenido del formulario */
-.pqr-form-content {
-  flex: 2;
-  min-width: 300px;
-}
-
-/* Estilos del logo */
-.pqr-form-logo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pqr-logo-image {
-  max-width: 160px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-/* Títulos */
-.pqr-form-title {
+/* Título y subtítulo */
+.pqr-header {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.pqr-form-title {
   color: #000000;
-  margin-bottom: -25px;
   font-size: 30px;
   font-weight: 600;
+  margin-bottom: -25px;
 }
 
 .pqr-form-subtitle {
-  text-align: center;
   color: #000000;
-  margin-bottom: 40px;
   font-size: 16px;
   font-weight: 450;
 }
 
-/* Estilos del formulario */
+/* Contenedor del contenido principal (formulario y logo) */
+.pqr-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+/* Formulario */
 .pqr-custom-form {
+  flex: 2;
   display: flex;
   flex-direction: column;
+  width: 100%; 
 }
 
 .pqr-form-group {
@@ -77,31 +74,24 @@
 
 .pqr-form-label {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #000000;
   font-weight: bold;
 }
 
 .pqr-form-label1 {
   display: block;
-  margin-bottom: -5px;
   color: #000000;
   font-weight: bold;
+  margin-bottom: -10px;
 }
 
-.pqr-form-input,
-.pqr-form-textarea {
+.pqr-form-input, .pqr-form-textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
-}
-
-.pqr-form-input:focus,
-.pqr-form-textarea:focus {
-  outline: none;
-  border-color: #007bff;
 }
 
 .pqr-error {
@@ -126,52 +116,62 @@
   background-color: #7CCF53;
 }
 
+/* Contenedor del logo */
+.pqr-form-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+/* Imagen del logo */
+.pqr-logo-image {
+  max-width: 160px;
+  height: auto;
+  border-radius: 50%;
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   .pqr-form-wrapper {
-    flex-direction: column;
-    align-items: center;
+    width: 90%; 
     padding: 15px;
   }
 
-  .pqr-form-logo {
-    margin-top: 20px;
+  .pqr-content {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .pqr-form-group {
+    width: 100%; 
   }
 
   .pqr-logo-image {
-    max-width: 100px;
-  }
-
-  /* Ajuste de los márgenes */
-  .pqr-form-title {
-    font-size: 24px;
-    color: #333;
-    margin: 0;
-  }
-
-  .pqr-form-subtitle {
-    font-size: 16px;
-    color: #666;
-    margin: 5px 0 20px 0;
-  }
-
-  .pqr-form-wrapper {
-    width: 100%; /* Ajuste el ancho al 100% */
-    padding: 10px; /* Reduce el padding en pantallas más pequeñas */
-  }
-
-  /* Ajustes en los campos del formulario */
-  .pqr-form-group {
-    margin-bottom: 15px; /* Reduce el espacio entre los campos */
-  }
-
-  .pqr-form-input,
-  .pqr-form-textarea {
-    padding: 10px; /* Reduce el padding de los campos */
+    max-width: 120px; 
   }
 
   .pqr-form-button {
-    padding: 10px;
-    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+    font-size: 14px; 
   }
+}
+
+@media (max-width: 480px) {
+  .pqr-form-title {
+    font-size: 24px; 
+  }
+
+  .pqr-form-subtitle {
+    font-size: 14px; 
+  }
+
+  .pqr-form-logo {
+    margin-top: 10px; 
+  }
+}
+
+.pqr-form-textarea {
+  resize: none;
+  height: auto; 
 }

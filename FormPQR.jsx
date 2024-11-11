@@ -1,11 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import '../styles/FormPQR.css'; // Ruta para el archivo de estilos
-import logo from '../assets/logo1.png'; // Asegúrate de tener el logo en esta ruta
+import '../styles/FormPQR.css';
+import logo from '../assets/logo1.png';
 
 const Form = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-
   const onSubmit = (data) => {
     console.log(data);
     alert('Formulario enviado correctamente');
@@ -13,14 +12,18 @@ const Form = () => {
 
   return (
     <div className="pqr-form-container">
+      {/* Contenedor principal */}
       <div className="pqr-form-wrapper">
-        <div className="pqr-form-content">
-          <div className="pqr-title-container">
-            <h2 className="pqr-form-title">Enviar PQR</h2>
-            <h5 className="pqr-form-subtitle">Ayudame a mejorar tu experiencia con nosotros</h5>
-          </div>
+        {/* Título y subtítulo */}
+        <div className="pqr-header">
+          <h2 className="pqr-form-title">Enviar PQR</h2>
+          <h5 className="pqr-form-subtitle">Ayúdame a mejorar tu experiencia con nosotros</h5>
+        </div>
+
+        {/* Contenedor de contenido (formulario y logo) */}
+        <div className="pqr-content">
+          {/* Formulario */}
           <form className="pqr-custom-form" onSubmit={handleSubmit(onSubmit)}>
-            {/* Campos del formulario */}
             <div className="pqr-form-group">
               <label htmlFor="name" className="pqr-form-label1">Nombre Completo:</label>
               <input
@@ -59,9 +62,11 @@ const Form = () => {
 
             <button className="pqr-form-button" type="submit">Enviar</button>
           </form>
-        </div>
-        <div className="pqr-form-logo">
-          <img src={logo} alt="Logo" className="pqr-logo-image" />
+
+          {/* Logo */}
+          <div className="pqr-form-logo">
+            <img src={logo} alt="Logo" className="pqr-logo-image" />
+          </div>
         </div>
       </div>
     </div>
@@ -69,4 +74,3 @@ const Form = () => {
 };
 
 export default Form;
-
